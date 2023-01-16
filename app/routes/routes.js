@@ -1,10 +1,15 @@
-const {Router}  = require('express');
+const { Router } = require('express');
 const router = Router();
 const {
     exportJson,
-    uploadFile } = require('../controllers/controllers')
+    uploadFile,
+    userTime,
+    pokemon } = require('../controllers/controllers');
+ const auth = require('../middlewares/auth')
 
 router.get('/user', exportJson);
-router.post("/upload", uploadFile);
+router.post('/upload', uploadFile);
+router.post('/time', auth, userTime);
+router.get("/pokemon/:id", pokemon);
 
 module.exports = router;
