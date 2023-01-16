@@ -21,7 +21,7 @@ appm.use(multer({
         if (mimetype && extname) {
             return cb(null, true);
         } 
-        cb(new Error('Error tipo de archivo no aceptado. No puedo lograr devolver un mensaje flash desde aca :('))
+        cb(new Error('Error tipo de archivo no aceptado.'))
     }
 }).single('image'));
 
