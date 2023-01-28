@@ -1,7 +1,6 @@
 const ctrl = {};
-// Funciones
 ctrl.exportJson = (req, res) =>
-res.json(
+res.status(200).json(
     {
         name: 'Alejandro',
         age: 37,
@@ -23,7 +22,7 @@ ctrl.pokemon = async (req, res) => {
     const {id} = req.params;
     const pokeApi = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const pokemon = await pokeApi.json();
-    res.json({
+    res.status(200).json({
         name: pokemon.name,
         height: pokemon.height,
         weight: pokemon.weight

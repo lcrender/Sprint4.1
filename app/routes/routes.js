@@ -9,7 +9,7 @@ const {
 
 router.get('/user', exportJson);
 router.post('/upload', uploadFile);
-router.post('/time', auth, userTime);
+router.post('/time', userTime);
 router.get("/pokemon/:id", pokemon);
 
 module.exports = router;
