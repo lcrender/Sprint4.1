@@ -1,12 +1,14 @@
 const ctrl = {};
-ctrl.exportJson = (req, res) =>
+
+ctrl.exportJson = (req, res) => { 
+const getUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 res.status(200).json(
     {
         name: 'Alejandro',
         age: 37,
-        url: 'http://localhost:4000/user'
-    }
-);
+        url: getUrl
+    });
+}
 ctrl.uploadFile = (req, res) => {  
     res.send("Archivo enviado")
 };
