@@ -1,13 +1,14 @@
 const ctrl = {};
-// Funciones
-ctrl.exportJson = (req, res) =>
-res.json(
+
+ctrl.exportJson = (req, res) => { 
+const getUrl = req.protocol + '://' + req.get('host') + req.originalUrl
+res.status(200).json(
     {
         name: 'Alejandro',
         age: 37,
-        url: 'http://localhost:4000/user'
-    }
-);
+        url: getUrl
+    });
+}
 ctrl.uploadFile = (req, res) => {  
     res.send("Archivo enviado")
 };
@@ -23,7 +24,7 @@ ctrl.pokemon = async (req, res) => {
     const {id} = req.params;
     const pokeApi = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const pokemon = await pokeApi.json();
-    res.json({
+    res.status(200).json({
         name: pokemon.name,
         height: pokemon.height,
         weight: pokemon.weight

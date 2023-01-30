@@ -7,9 +7,8 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(require('./middlewares/middleware'));
-//app.use(require('./middlewares/auth'));
 app.use(require('./routes/routes'));
- 
+
 // Archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
