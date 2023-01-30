@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(require('./middlewares/middleware'));
 //app.use(require('./middlewares/auth'));
 app.use(require('./routes/routes'));
-
+ 
 // Archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
 
