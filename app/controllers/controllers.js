@@ -8,14 +8,14 @@ ctrl.exportJson = (req, res) => {
 			url: getUrl
 		});
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(500).json({ message: error });
 	}
 };
 ctrl.uploadFile = (req, res) => {
 	try {
 		res.status(201).json({ menssage: 'Archivo enviado' });
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(500).json({ message: error });
 	}
 };
 ctrl.userTime = (req, res) => {
@@ -27,7 +27,7 @@ ctrl.userTime = (req, res) => {
 		res.header('Authorization');
 		res.status(200).json({ username, date });
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(500).json({ message: error });
 	}
 };
 ctrl.pokemon = async (req, res) => {
@@ -41,7 +41,7 @@ ctrl.pokemon = async (req, res) => {
 			weight: pokemon.weight
 		});
 	} catch (error) {
-		res.status(400).json({ message: error });
+		res.status(500).json({ message: error });
 	}
 };
 module.exports = ctrl;
