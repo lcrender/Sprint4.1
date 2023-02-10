@@ -30,5 +30,6 @@ El formato debe ser como este ejemplo:<br>
 
 ![Auth Example](https://github.com/lcrender/Sprint4.1/blob/chaza/img/auth2.png)
 
+Para el 4to caso reemplazar el "ID" de la URL por el numero de ID.<br>
 
-
+![saludos](https://github.com/lcrender/Sprint4.1/blob/chaza/img/pikachu.webp)
