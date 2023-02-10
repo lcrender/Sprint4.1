@@ -1,11 +1,34 @@
 # Sprint4.1
+## Como Probar el Proyecto:
+
 `npm start` para comenzar el proyecto<br>
 
 Importar Colección Postman<br>
+La colección de Postman tiene 4 pruebas que funcionan con las siguientes peticiones HTTP:
+```
+GET http://localhost:4000/user
+POST http://localhost:4000/upload
+POST http://localhost:4000/time
+GET http://localhost:4000/pokemon/ID
+```
 
-Basic Auth<br>
-POST http://localhost:4000/time<br>
-utilizar basic authorization con un username y password, estos deben ser los mismos que las KEYS/VALUES que se envíen por postman<br>
-KEY: username<br>
-KEY: password<br>
+En el caso de la 2da peticion hay que adjuntar un archivo de imagen de tipo: jpg|jpeg|png|gif. Para esto debes ir dentro del Postman a la solapa Body - Form-data - "Key": image. "Tipo": File. y en el campo "Value" seleccionar una imagen.<br>
+
+<img>
+
+Para el 3er caso hay que hacer "Basic Auth"<br>
+Para esto dentro del Postman ir a la solapa authorization, seleccionar "Type": Basic Auth. Luego poner un usuario y contraseña en el campo de al lado.<br>
+Por ultimo hay que mandar por el body del mensaje un Json con los datos "Username" y "Password", estos deben coincidir con los puestos anteriormente.<br>
+El formato debe ser como este ejemplo:<br>
+```
+{
+    "username": "test",
+    "password": "test"
+}
+```
+img
+
+img
+
+
 
