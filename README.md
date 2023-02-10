@@ -14,7 +14,7 @@ GET http://localhost:4000/pokemon/ID
 
 En el caso de la 2da peticion hay que adjuntar un archivo de imagen de tipo: jpg|jpeg|png|gif. Para esto debes ir dentro del Postman a la solapa Body - Form-data - "Key": image. "Tipo": File. y en el campo "Value" seleccionar una imagen.<br>
 
-<img>
+![Upload File Example](https://github.com/lcrender/Sprint4.1/blob/chaza/img/upload.png)
 
 Para el 3er caso hay que hacer "Basic Auth"<br>
 Para esto dentro del Postman ir a la solapa authorization, seleccionar "Type": Basic Auth. Luego poner un usuario y contraseña en el campo de al lado.<br>
@@ -26,9 +26,9 @@ El formato debe ser como este ejemplo:<br>
     "password": "test"
 }
 ```
-img
+![Auth Example](https://github.com/lcrender/Sprint4.1/blob/chaza/img/auth1.png)
 
-img
+![Auth Example](https://github.com/lcrender/Sprint4.1/blob/chaza/img/auth2.png)
 
 
 
