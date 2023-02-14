@@ -36,12 +36,13 @@
 						{
 							"key": "image",
 							"type": "file",
-							"src": "/Users/ale/Desktop/Damn/coverI3.jpg"
+							"src": "/Users/ale/Downloads/7ac1c575-cc39-4946-a7f9-cf8ca966a6f1.JPG"
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:4000/upload",
+					"raw": "http://localhost:4000/upload",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
@@ -56,8 +57,45 @@
 		{
 			"name": "Ejercicio3",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "M@radona!",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "diegote",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:4000/time",
 					"protocol": "http",
@@ -78,7 +116,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/pokemon/4",
+					"raw": "http://localhost:4000/pokemon/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -86,7 +124,26 @@
 					"port": "4000",
 					"path": [
 						"pokemon",
-						"4"
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/algo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"algo"
 					]
 				}
 			},
