@@ -21,7 +21,7 @@ ctrl.uploadFile = (req, res) => {
 		}
 	} catch (error) {
 		return res.status(500).json({ message: error });
-	} das
+	}
 };
 ctrl.userTime = (req, res) => {
 	try {
